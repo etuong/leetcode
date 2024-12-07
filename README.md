@@ -6,4 +6,4 @@
 
 | #   | Title                                             | Solution                         | Difficulty |
 | --- | ------------------------------------------------- | -------------------------------- | ---------- |
-| 1   | [Two Sum](https://leetcode.com/problems/two-sum/) | [Python](./algorithms/TwoSum.py) | Easy       |
+| 1   | [Two Sum](https://leetcode.com/problems/two-sum/) | [Python](./algorithm/TwoSum.py) | Easy       |
