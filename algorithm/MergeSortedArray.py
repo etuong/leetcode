@@ -22,7 +22,13 @@ class Solution:
         b = n - 1
         c = m + n - 1
         while b >= 0:
-            if 
+            if nums2[b] > nums1[a]:
+                nums1[c] = nums2[b]
+                b = b - 1
+            else:
+                nums1[c] = nums1[a]
+                a = a - 1
+            c = c - 1
 
 
 nums1 = [1,2,3,0,0,0]
@@ -30,3 +36,5 @@ m = 3
 nums2 = [2,5,6]
 n = 3
 s = Solution()
+s.merge2(nums1, m, nums2, n)
+print(nums1)
