@@ -1,7 +1,7 @@
 from typing import List
 
 class Solution:
-    def twoSumBrtuteForce(self, nums: List[int], target: int) -> List[int]:
+    def twoSumBruteForce(self, nums: List[int], target: int) -> List[int]:
         for i in range(len(nums) - 1):
             for j in range(i + 1, len(nums)):
                 if nums[i] + nums[j] == target:
@@ -11,12 +11,12 @@ class Solution:
         sorted_nums  = sorted(enumerate(nums), key=lambda x: x[1])
         left = 0
         right = len(nums) - 1
-        while right >= left:
-            current_sum = sorted_nums [left][1] + sorted_nums [right][1]
+        while left < right:
+            current_sum = sorted_nums[left][1] + sorted_nums[right][1]
             if current_sum == target:
                 return sorted_nums [left][0], sorted_nums [right][0]
             if current_sum > target:
-                right = right - 1
+                right -= 1
             if current_sum < target:
                 left = left + 1
 
@@ -32,6 +32,6 @@ class Solution:
 nums = [2,1,6,3,5,4]
 target = 11
 s = Solution()
-print(s.twoSumBrtuteForce(nums, target))
+print(s.twoSumBruteForce(nums, target))
 print(s.twoSumSorted(nums, target))
 print(s.twoSumBest(nums, target))
